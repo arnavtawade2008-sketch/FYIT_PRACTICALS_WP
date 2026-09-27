@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Technology Suggestion Form</title>
+<script>
+function validateForm()
+{
+var tech = document.getElementById("techname").value;
+if (tech == "")
+{
+alert("Please enter Technology Name");
+return false;
+}
+alert("Form Submitted Successfully");
+return true;
+}
+</script>
+</head>
+<body>
+<h2>Technology Suggestion Form</h2>
+<form onsubmit="return validateForm()">
+<label>Technology Name:</label><br>
+<input type="text" id="techname"><br><br>
+<label>Technology Description:</label><br>
+<textarea rows="4" cols="30"></textarea><br><br>
+<label>Technology Type:</label><br>
+<input type="radio" name="type"> Software
+<input type="radio" name="type"> Hardware
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

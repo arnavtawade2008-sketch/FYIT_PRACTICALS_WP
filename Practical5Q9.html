@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Checkbox Validation</title>
+<script>
+function validateApplication()
+{
+var education = document.getElementById("education").checked;
+var healthcare = document.getElementById("healthcare").checked;
+var finance = document.getElementById("finance").checked;
+var industry = document.getElementById("industry").checked;
+if(!education && !healthcare && !finance && !industry)
+{
+alert("Please select at least one Application Area");
+return false;
+}
+alert("Application Area Selected");
+return true;
+}
+</script>
+</head>
+<body>
+<h2>Application Area Form</h2>
+<form onsubmit="return validateApplication()">
+<label>Application Area:</label><br><br>
+<input type="checkbox" id="education">
+<label for="education">Education</label><br>
+<input type="checkbox" id="healthcare">
+<label for="healthcare">Healthcare</label><br>
+<input type="checkbox" id="finance">
+<label for="finance">Finance</label><br>
+<input type="checkbox" id="industry">
+<label for="industry">Industry</label><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

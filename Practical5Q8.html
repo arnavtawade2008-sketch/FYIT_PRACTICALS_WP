@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio Button Validation</title>
+<script>
+function validateType()
+{
+var software = document.getElementById("software").checked;
+var hardware = document.getElementById("hardware").checked;
+if(!software && !hardware)
+{
+alert("Please select Technology Type");
+return false;
+}
+alert("Technology Type Selected");
+return true;
+}
+</script>
+</head>
+<body>
+<h2>Technology Type Form</h2>
+<form onsubmit="return validateType()">
+<label>Technology Type:</label><br><br>
+<input type="radio" id="software" name="type">
+<label for="software">Software</label>
+<input type="radio" id="hardware" name="type">
+<label for="hardware">Hardware</label>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact Number Validation</title>
+<script>
+function validateContact()
+{
+var contact = document.getElementById("contact").value;
+if(contact == "")
+{
+alert("Please enter Contact Number");
+return false;
+}
+if(contact.length != 10)
+{
+alert("Contact Number must contain exactly 10 digits");
+return false;
+}
+alert("Contact Number is Valid");
+return true;
+}
+</script>
+</head>
+<body>
+<h2>Contact Number Validation Form</h2>
+<form onsubmit="return validateContact()">
+<label>Contact Number:</label><br>
+<input type="text" id="contact"><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
